@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% flash.each do |name, msg| %>
+        <div class="flash <%=name%>" style="border: 1px dashed; font-size: 2em;">
+            <%= msg %>
+        </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
